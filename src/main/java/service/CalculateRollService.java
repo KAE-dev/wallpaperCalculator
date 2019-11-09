@@ -1,8 +1,8 @@
 package service;
 
 public class CalculateRollService {
-    public double calculationOfRolls(double length, double width, double wallpaperWidth, double wallpaperLength, double roomHeight) {
-        double roomPerimeter = (length + width) * 2;
+    public double calculationOfRolls(double roomLength, double roomWidth, double wallpaperWidth, double wallpaperLength, double roomHeight) {
+        double roomPerimeter = (roomLength + roomWidth) * 2;
         double sumStrip = roomPerimeter / wallpaperWidth;
         if (sumStrip % 1 != 0) {
             sumStrip -= sumStrip % 1;
