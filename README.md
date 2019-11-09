@@ -5,5 +5,5 @@
    для упрощения считайте, что комната
    прямоугольной формы, без дверей и окон.</p>
    
-
+[![Build Status](https://travis-ci.org/KAE-dev/wallpaperCalculator.svg?branch=master)](https://travis-ci.org/KAE-dev/wallpaperCalculator)  
 
