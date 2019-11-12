@@ -5,20 +5,18 @@ public class CalculateRollService {
         double wallpaperClearance = 0.1;
 
         double roomPerimeter = (roomLength + roomWidth) * 2;
-        double sumStrip = roomPerimeter / wallpaperWidth;
-        if (sumStrip % 1 != 0) {
-            sumStrip -= sumStrip % 1;
+        int sumStrip = (int) (roomPerimeter / wallpaperWidth);
+        if (roomPerimeter % wallpaperWidth != 0) {
             sumStrip++;
         }
 
         double stripsFromARoll = wallpaperLength / (roomHeight + wallpaperClearance);
 
-        double calculateRoll = sumStrip / stripsFromARoll;
-        if (calculateRoll % 1 != 0) {
-            calculateRoll -= calculateRoll % 1;
+        int calculateRoll = (int) (sumStrip / stripsFromARoll);
+        if (sumStrip % stripsFromARoll != 0) {
             calculateRoll++;
         }
 
-        return (int) calculateRoll;
+        return calculateRoll;
     }
 }
